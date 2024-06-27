@@ -8,7 +8,7 @@ def wish(name):
     st.audio(aud, format="audio/wav", start_time=0, autoplay=True, loop=True)
 
     if name:
-        img = "https://github.com/TejasVarute/Birthday-Wishes-using-Streamlit/blob/main/data%2Fsong.mp3"
+        img = ".data/img.jpg"
         
         _,col2,_ = st.columns(3)
         with col2:

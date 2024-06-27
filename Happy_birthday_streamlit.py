@@ -5,7 +5,7 @@ def wish(name):
     st.set_page_config(page_title="Happy Birthday Wisher - By Tejas Varute", layout="centered")
     if name:
         img = "./data/img.jpg"
-
+        aud = "https://github.com/TejasVarute/Birthday-Wishes-using-Streamlit/blob/main/data%2Fsong.mp3"
         _,col2,_ = st.columns(3)
 
         with col2:
@@ -15,7 +15,7 @@ def wish(name):
         st.markdown(f"<h1 style='text-align: center; color: red'>HAPPY BIRTHDAY {name}</h1>", unsafe_allow_html=True)
         st.subheader('', divider='rainbow')
 
-        st.audio("./data/song.mp3", format="audio/wav", start_time=0, autoplay=True, loop=True)
+        st.audio(aud, format="audio/wav", start_time=0, autoplay=True, loop=True)
 
         image_style = '''
             <style>

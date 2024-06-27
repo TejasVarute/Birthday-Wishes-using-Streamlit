@@ -2,7 +2,7 @@ import streamlit as st
 import time
 
 def wish(name):
-    st.set_page_config(page_title="Happy Birthday Wisher", layout="centered")
+    st.set_page_config(page_title="Happy Birthday Wisher - By Tejas Varute", layout="centered")
     if name:
         img = "./data/img.jpg"
 

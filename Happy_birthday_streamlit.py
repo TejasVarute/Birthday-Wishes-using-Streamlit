@@ -5,12 +5,11 @@ def wish(name):
     st.set_page_config(page_title="Happy Birthday Wisher", layout="centered")
     if name:
         img = "./data/img.jpg"
-        st.audio("./data/song.mp3", format="audio/mp3", start_time=0, autoplay=True, loop=True)
+        st.audio("./data/song.mp3", format="audio/mp3", start_time=0, autoplay=1, loop=1)
         aud_style = """
                     <style>
                     audio{
                         display: none;
-                        controls: autoplay;
                         }
                     </style>
                     """

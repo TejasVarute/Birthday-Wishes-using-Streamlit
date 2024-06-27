@@ -38,4 +38,4 @@ def wish(name):
         while(True):
             time.sleep(1.7)
             st.balloons()
-wish("SHRIPAD")
+wish("")

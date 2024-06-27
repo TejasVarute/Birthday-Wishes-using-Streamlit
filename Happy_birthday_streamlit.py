@@ -3,19 +3,20 @@ import time
 
 def wish(name):
     st.set_page_config(page_title="Happy Birthday Wisher - By Tejas Varute", layout="centered")
+    
+    aud = "./data/song.MP3"
+    st.audio(aud, format="audio/wav", start_time=0, autoplay=True, loop=True)
+
     if name:
         img = "./data/img.jpg"
-        aud = "https://github.com/TejasVarute/Birthday-Wishes-using-Streamlit/blob/main/data%2Fsong.mp3"
-        _,col2,_ = st.columns(3)
-
+        
+        _,col2,_ = st.columns(3)
         with col2:
             st.image(img, width=250)
 
         st.subheader('', divider='rainbow')
         st.markdown(f"<h1 style='text-align: center; color: red'>HAPPY BIRTHDAY {name}</h1>", unsafe_allow_html=True)
         st.subheader('', divider='rainbow')
-
-        st.audio(aud, format="audio/wav", start_time=0, autoplay=True, loop=True)
 
         image_style = '''
             <style>
@@ -37,4 +38,5 @@ def wish(name):
         while(True):
             time.sleep(1.7)
             st.balloons()
+
 wish("SHRIPAD")

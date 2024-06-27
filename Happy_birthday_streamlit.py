@@ -4,7 +4,7 @@ import time
 def wish(name):
     st.set_page_config(page_title="Happy Birthday Wisher - By Tejas Varute", layout="centered")
     
-    aud = "./data/song.MP3"
+    aud = "./data/song.mp3"
     st.audio(aud, format="audio/wav", start_time=0, autoplay=True, loop=True)
 
     if name:

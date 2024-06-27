@@ -5,6 +5,15 @@ def wish(name):
     st.set_page_config(page_title="Happy Birthday Wisher", layout="centered")
     if name:
         img = "./data/img.jpg"
+        st.audio("./data/song.mp3", format="audio/wav", start_time=0, autoplay=True, loop=True)
+        aud_style = """
+                    <style>
+                    audio{
+                        display: none;
+                        }
+                    </style>
+                    """
+        st.html(aud_style);
 
         _,col2,_ = st.columns(3)
 
@@ -14,8 +23,6 @@ def wish(name):
         st.subheader('', divider='rainbow')
         st.markdown(f"<h1 style='text-align: center; color: red'>HAPPY BIRTHDAY {name}</h1>", unsafe_allow_html=True)
         st.subheader('', divider='rainbow')
-
-        st.audio("./data/song.mp3", format="audio/wav", start_time=0, autoplay=True, loop=True)
 
         image_style = '''
             <style>
@@ -27,8 +34,6 @@ def wish(name):
                 }
                 img{
                     border-radius: 20%;
-                }
-                audio{
                 }
             </style>
             '''

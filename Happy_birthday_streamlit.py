@@ -29,7 +29,6 @@ def wish(name):
                     border-radius: 20%;
                 }
                 audio{
-                    display: none;
                 }
             </style>
             '''

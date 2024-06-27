@@ -8,7 +8,7 @@ def wish(name):
         img = ".data/img.jpg"
 
         #aud = "./data/song.mp3"
-        st.audio(aud, format="audio/wav", start_time=0, autoplay=True, loop=True)
+        #st.audio(aud, format="audio/wav", start_time=0, autoplay=True, loop=True)
         
         _,col2,_ = st.columns(3)
         with col2:

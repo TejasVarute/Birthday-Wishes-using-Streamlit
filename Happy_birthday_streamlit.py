@@ -2,12 +2,7 @@ import streamlit as st
 import time
 
 def wish(name):
-    st.set_page_config(page_title="Happy Birthday Wisher -By Tejas Varute", layout="centered")
-    
-    st.audio("./data/song.mp3", format="audio/wav", start_time=0, autoplay=True, loop=True)
-    aud_style="<style> audio{ display: none; } </style>"
-    st.html(aud_style)
-    
+    st.set_page_config(page_title="Happy Birthday Wisher", layout="centered")
     if name:
         img = "./data/img.jpg"
 
@@ -20,6 +15,8 @@ def wish(name):
         st.markdown(f"<h1 style='text-align: center; color: red'>HAPPY BIRTHDAY {name}</h1>", unsafe_allow_html=True)
         st.subheader('', divider='rainbow')
 
+        st.audio("./data/song.mp3", format="audio/wav", start_time=0, autoplay=True, loop=True)
+
         image_style = '''
             <style>
                 h1 {
@@ -31,6 +28,9 @@ def wish(name):
                 }
                 img{
                     border-radius: 20%;
+                }
+                audio{
+                    display: none;
                 }
             </style>
             '''
